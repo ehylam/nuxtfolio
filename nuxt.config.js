@@ -18,10 +18,7 @@ export default {
 			{
 				src: 'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js'
 			},
-			{ src: 'https://code.jquery.com/jquery-3.5.0.min.js' },
-			{
-				src: 'assets/js/locomotive-scroll.min.js'
-			}
+			{ src: 'https://code.jquery.com/jquery-3.5.0.min.js' }
 		]
 	},
 	/*
