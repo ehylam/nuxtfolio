@@ -10,6 +10,13 @@ import AppHero from "@/components/AppHero.vue";
 import AppContent from "@/components/AppContent.vue";
 // import LocomotiveScroll from "locomotive-scroll";
 export default {
+  head() {
+    return {
+      script: [
+        { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }
+      ]
+    };
+  },
   data() {
     return {
       // lmS: null
