@@ -1,13 +1,12 @@
 <template>
   <section class="hero_container" data-scroll-container>
-    <div class="top-bg"></div>
-    <div class="mid-bg">
-      <div class="foreground"></div>
-      <h1 class="me">{{ name }}</h1>
+    <div class="background">
+      <div class="hero-content__wrapper">
+        <h1 class="me">{{ name }}</h1>
+        <h3>{{subheading}}</h3>
+      </div>
     </div>
-    <div class="bottom-bg">
-      <h3>{{subheading}}</h3>
-    </div>
+    <div class="foreground"></div>
   </section>
 </template>
 
@@ -16,7 +15,7 @@ export default {
   data() {
     return {
       name: "Eric Lam",
-      subheading: "Front-end Web Developer"
+      subheading: "Junior Front-end Web Developer @ Chriate"
     };
   },
   mounted() {}
@@ -25,40 +24,68 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  .top-bg {
-    height: calc(100vh / 3);
-    width: 100%;
-    background: url("~assets/images/top-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .mid-bg {
-    height: calc(100vh / 3);
-    width: 100%;
-    background: url("~assets/images/mid-bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  // .top-bg {
+  //   height: calc(100vh / 3);
+  //   width: 100%;
+  //   background: url("~assets/images/top-bg.jpg");
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  // }
+  // .mid-bg {
+  //   height: calc(100vh / 3);
+  //   width: 100%;
+  //   background: url("~assets/images/mid-bg.png");
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  // }
 
-  .bottom-bg {
+  // .bottom-bg {
+  //   position: relative;
+  //   height: calc(100vh / 3);
+  //   width: 100%;
+  //   background: url("~assets/images/bottom-bg.png");
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+
+  // }
+
+  .background {
     position: relative;
-    height: calc(100vh / 3);
+    height: 100vh;
     width: 100%;
-    background: url("~assets/images/bottom-bg.png");
+    background: url("~assets/images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
-    h3 {
+    .hero-content__wrapper {
       position: absolute;
-      top: 0%;
-      left: calc(50% + 170px);
-      transform: translateX(-50%);
-      color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 45vh;
+      .me {
+        color: white;
+        font-size: 90px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        transform: translateX(-50%);
+      }
+      h3 {
+        position: absolute;
+        bottom: 0%;
+        left: calc(50% + 220px);
+        transform: translateX(-50%);
+        color: white;
+      }
     }
   }
+
   position: relative;
   height: 100vh;
   width: 100%;
@@ -79,16 +106,6 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     z-index: 3;
-  }
-
-  .me {
-    color: white;
-    font-size: 90px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
-    transform: translateX(-50%);
   }
 }
 </style>

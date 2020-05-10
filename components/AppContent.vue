@@ -23,7 +23,13 @@ export default {
 section {
   height: 100vh;
   width: 100%;
-  padding: 50px 100px;
+  padding: 50px 25px;
+  @media (min-width: 768px) {
+    padding: 50px 70px;
+  }
+  @media (min-width: 1024px) {
+    padding: 100px 120px;
+  }
   .content {
     max-width: calc(50vw - 200px);
     h3,
